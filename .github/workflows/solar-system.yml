@@ -14,7 +14,8 @@ env:
 
 jobs:
     unit-testing:
-        container: node:20
+        container: 
+          image: node:20
         name: Unit Testing
         runs-on: ubuntu-latest
         steps:
