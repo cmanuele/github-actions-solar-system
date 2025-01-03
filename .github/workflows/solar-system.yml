@@ -127,7 +127,7 @@ jobs:
         run: echo "INGRESS_IP"=$(kubectl -n ingress-nginx get services ingress-nginx-controller -o jsonpath="{.status.loadBalancer.ingress[0].ip}") >> $GITHUB_ENV
 
       - name: Replace tokens in manifest files
-        uses: cschleiden/replace-tokens/v1
+        uses: cschleiden/replace-tokens@v1
         with:
           tokenPrefix: '_{_'
           tokenSuffix: '_}_'
